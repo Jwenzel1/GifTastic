@@ -1,0 +1,13 @@
+.btn{
+  margin: 15px;
+}
+
+.gif{
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.gif p{
+  margin-top: 0px;
+  font-weight: bold;
+}
