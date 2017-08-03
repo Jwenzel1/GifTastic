@@ -45,6 +45,14 @@ $(document).ready(function(){
     addButton(topics[i]);
   }
 
+  $(document).on("click", "#topicsArea button", function(){
+    addGifs($(this).attr("data-topic"));
+  });
+
+  $(document).on("click", "#gifsArea .gif img", function(){
+    toggleGif($(this));
+  });
+
   $("form").submit(function(){
     var text = $("form input").val().toLowerCase();
     if(topics.indexOf(text) === -1){
@@ -52,13 +60,5 @@ $(document).ready(function(){
     }
     $("form input").val("");
     return false;
-  });
-
-  $(document).on("click", "#topicsArea button", function(){
-    addGifs($(this).attr("data-topic"));
-  });
-
-  $(document).on("click", "#gifsArea .gif img", function(){
-    toggleGif($(this));
   });
 });
