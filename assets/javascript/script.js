@@ -1,4 +1,4 @@
-var topics = ["dogs", "cats", "bears", "john cena", "doge", "futurama", "cats"];
+var topics = ["dogs", "cats", "bears", "john cena", "doge", "futurama", "birds", "computers", "hacking", "marvel", "travel"];
 var key = "97be7d60a4e14ba2adcdba33e5875010";
 var actualGifs = [];
 var stills = []
