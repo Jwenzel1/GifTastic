@@ -30,6 +30,19 @@ function toggleGif(currentGif){
   currentGif.attr("data-toggleImg", originalState);
 }
 
+function checkInput(input){
+  if(input === ""){
+    return false;
+  }
+  var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  for(var i = 0; i < input.length; i++){
+    if(alphabet.indexOf(input.charAt(i)) === -1){
+      return false;
+    }
+  }
+  return true;
+}
+
 $(document).ready(function(){
   for(var i = 0; i < topics.length; i++){
     addButton(topics[i]);
@@ -45,7 +58,7 @@ $(document).ready(function(){
 
   $("form").submit(function(){
     var text = $("form input").val().toLowerCase();
-    if(topics.indexOf(text) === -1){
+    if(topics.indexOf(text) === -1 && checkInput(text)){
       addButton(text);
     }
     $("form input").val("");
