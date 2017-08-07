@@ -48,11 +48,11 @@ $(document).ready(function(){
     addButton(topics[i]);
   }
 
-  $(document).on("click", "#topicsArea button", function(){
+  $(document.body).on("click", "#topicsArea button", function(){
     addGifs($(this).attr("data-topic"));
   });
 
-  $(document).on("click", "#gifsArea .gif img", function(){
+  $(document.body).on("click", "#gifsArea .gif img", function(){
     toggleGif($(this));
   });
 
